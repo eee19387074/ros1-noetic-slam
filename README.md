@@ -114,7 +114,7 @@ source devel/setup.bash
 
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/<your-username>/ros_noetic_slam_diff_robot.git
+git clone https://github.com/eee19387074/ros_noetic_slam_diff_robot.git
 ```
 
 3. Build the workspace:
