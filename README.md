@@ -70,29 +70,6 @@ ROS1-NOETIC-SLAM/
 ├── .gitattributes
 └── README.md
 ```
-
-ros_noetic_slam_diff_robot/
-├── robot_description/
-│   ├── urdf/
-│   ├── meshes/
-│   └── launch/
-├── slam/
-│   ├── config/
-│   └── launch/
-├── navigation/
-│   ├── config/
-│   └── launch/
-├── gazebo/
-│   ├── worlds/
-│   └── launch/
-├── teleop/
-├── bringup/
-├── maps/
-├── rviz/
-└── README.md
-
-````
-
 ---
 
 ## 🛠️ Requirements
