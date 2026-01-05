@@ -22,6 +22,10 @@
             <publishOdom>true</publishOdom>
             <publishOdomTF>true</publishOdomTF>
             <publishWheelTF>true</publishWheelTF>
+            <odometryFrame>odom</odometryFrame>
+            <publishTf>true</publishTf>
+
+
 
         </plugin>
     </gazebo>
