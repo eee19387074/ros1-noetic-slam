@@ -133,7 +133,7 @@ source devel/setup.bash
 ### 1. Launch Gazebo Simulation
 
 ```bash
-roslaunch gazebo bringup.launch
+roslaunch first_robot gazebo.launch
 ```
 
 This starts:
@@ -149,19 +149,19 @@ This starts:
 #### Option A: GMapping
 
 ```bash
-roslaunch slam gmapping.launch
+roslaunch first_robot slam.launch
 ```
 
 #### Option B: Hector SLAM
 
 ```bash
-roslaunch slam hector.launch
+roslaunch first_robot hector.launch
 ```
 
 #### Option C: Cartographer
 
 ```bash
-roslaunch slam cartographer.launch
+roslaunch first_robot cartographer.launch
 ```
 
 ---
@@ -179,7 +179,7 @@ Move the robot around to generate the map.
 ### 4. Visualize in RViz
 
 ```bash
-roslaunch rviz display.launch
+rviz
 ```
 
 RViz displays:
