@@ -13,6 +13,10 @@
     	<arg name="verbose" value="true"/>
   </include>
 
+  <!-- <arg name="world_file" default="$(find first_robot)/launch/office_small.world"/>
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(arg world_file)"/>
+ -->
+
 
   <!-- Spawn robot -->
   <node name="spawn_robot"

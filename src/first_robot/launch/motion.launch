@@ -1,0 +1,4 @@
+<launch>
+  <node name="lidar_motion" pkg="first_robot" type="lidar_based_motion.py" output="screen">
+  </node>
+</launch>
