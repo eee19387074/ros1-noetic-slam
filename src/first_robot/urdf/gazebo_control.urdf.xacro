@@ -16,12 +16,12 @@
             <!-- Topics -->
             <commandTopic>cmd_vel</commandTopic>
             <odometryTopic>odom</odometryTopic>
-            <robotBaseFrame>base_link</robotBaseFrame>
+            <robotBaseFrame>base_footprint</robotBaseFrame>
 
             <!-- TF / Odom -->
             <publishOdom>true</publishOdom>
             <publishOdomTF>true</publishOdomTF>
-            <publishWheelTF>true</publishWheelTF>
+            <publishWheelTF>false</publishWheelTF>
             <odometryFrame>odom</odometryFrame>
             <publishTf>true</publishTf>
 
