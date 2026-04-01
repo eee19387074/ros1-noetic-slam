@@ -27,7 +27,7 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>5</updateRate>
         <!-- IMPORTANT: The original parent frame MUST be set as bodyName! -->
-        <bodyName>base_link</bodyName>
+        <bodyName>base_footprint</bodyName>
         <topicName>gps_data</topicName>
         <frameId>base_footprint</frameId>
         <velocityTopicName>gps_velocity</velocityTopicName>

@@ -1,0 +1,22 @@
+<launch>
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_global" clear_params="true">
+    <rosparam command="load" file="$(find global_localization)/config/global_ekf.yaml" />
+    <remap from="/odometry/filtered" to="/odometry/filtered_global" />
+  </node>
+
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" respawn="true">
+
+    <param name="magnetic_declination_radians"            value="0.0659734457"/> <!-- 3.78 deg N/E -->
+    <param name="frequency"                               value="30"/>
+    <param name="publish_filtered_gps"                    value="true"/>
+    <param name="broadcast_utm_transform"                 value="true"/>
+    <param name="use_odometry_yaw"                        value="false"/>
+    <param name="broadcast_utm_transform_as_parent_frame" value="false"/>
+    <param name="zero_altitude"                           value="true"/> <!-- for a two_d_mode robot -->
+    
+    <remap from="/imu/data"           to="/imu" />
+    <remap from="/gps/fix"            to="/navsat/fix" />
+    <remap from="/odometry/filtered"  to="/odometry/filtered_global" />
+
+  </node>
+</launch>
