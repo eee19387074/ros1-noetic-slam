@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot name="sensor_gps" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <joint name="gps_joint" type="fixed">
+      <parent link="chassis"/>
+      <child link="gps_frame"/>
+    </joint>
+
+    <link name="gps_frame">
+      <inertial>
+        <origin xyz="0.0 0 0.05" rpy="0 0 0" />
+        <mass value="0.005" />
+        <inertia ixx="1e-9" ixy ="0" ixz ="0"
+                 iyy="1e-9" iyz ="0"
+                 izz="1e-9"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <gazebo>
+      <plugin name="gps_sensor" filename="libhector_gazebo_ros_gps.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>5</updateRate>
+        <!-- IMPORTANT: The original parent frame MUST be set as bodyName! -->
+        <bodyName>base_link</bodyName>
+        <topicName>gps_data</topicName>
+        <frameId>base_footprint</frameId>
+        <velocityTopicName>gps_velocity</velocityTopicName>
+        <referenceLatitude> 49.9</referenceLatitude>
+        <referenceLongitude>8.9</referenceLongitude>
+        <referenceHeading>90</referenceHeading>
+        <referenceAltitude>0</referenceAltitude>
+        <gaussianNoise>0 0 0</gaussianNoise>
+        <velocityDrift>0 0 0</velocityDrift>
+        <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise>
+      </plugin>
+    </gazebo>
+</robot>
