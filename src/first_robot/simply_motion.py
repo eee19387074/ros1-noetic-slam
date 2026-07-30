@@ -9,7 +9,7 @@ rate = rospy.Rate(5) # 10 Hz
 move_cmd= Twist()
 move_cmd.linear.x = 0.2 # Move forward at 0.5 m/s
 # su = rospy.Subscriber('/scan', LaserScan,callback)
-pu = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+pu = rospy.Publisher('/tu_delft_base_control/cmd_vel', Twist, queue_size=1)
 Forward = True
 
 while not rospy.is_shutdown():
