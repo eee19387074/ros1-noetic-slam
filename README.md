@@ -21,7 +21,7 @@ The primary goal of the project is to fuse multiple sources of information to pr
 src/
 ├── first_robot/
 │   ├── launch/
-│   │   └── gazebo.launch          # Launches Gazebo and spawns the robot
+│   │   └── sim.launch          # Launches Gazebo and spawns the robot
 │   └── maps/
 │       ├── my_map.pgm
 │       └── my_map.yaml            # Occupancy grid map
